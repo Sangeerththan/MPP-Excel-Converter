@@ -3,14 +3,12 @@ package org.example;
 import net.sf.mpxj.ProjectFile;
 import net.sf.mpxj.Task;
 import net.sf.mpxj.mpp.MPPReader;
-import net.sf.mpxj.reader.UniversalProjectReader;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
@@ -30,8 +28,6 @@ public class MPPToExcelConverter {
             // Load MPP file using MPXJ
             System.out.println(inputFilePath);
             File inputFile = new File(inputFilePath);
-//            UniversalProjectReader reader = new UniversalProjectReader();
-//            ProjectFile projectFile = reader.read(inputFile);
             ProjectFile projectFile = new MPPReader().read(inputFile);
 
             // Create a new Excel workbook
