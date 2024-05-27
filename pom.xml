@@ -13,22 +13,17 @@
         <dependency>
             <groupId>net.sf.mpxj</groupId>
             <artifactId>mpxj</artifactId>
-            <version>10.15.0</version>
+            <version>12.10.1</version>
         </dependency>
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
-            <version>5.2.3</version>
+            <version>5.2.5</version>
         </dependency>
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
-            <version>5.2.3</version>
-        </dependency>
-        <dependency>
-            <groupId>net.sf.mpxj</groupId>
-            <artifactId>mpxj</artifactId>
-            <version>10.8.0</version>
+            <version>5.2.5</version>
         </dependency>
         <dependency>
             <groupId>org.glassfish.jaxb</groupId>
@@ -38,7 +33,7 @@
         <dependency>
             <groupId>org.codehaus.plexus</groupId>
             <artifactId>plexus-utils</artifactId>
-            <version>3.0.5</version>
+            <version>3.0.24</version>
         </dependency>
         <dependency>
             <groupId>org.hibernate</groupId>
