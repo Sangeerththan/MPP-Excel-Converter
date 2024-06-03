@@ -1,0 +1,11 @@
+<appian-plugin name="MPPExcelConversion" key="org.mpp.plugin.MPPToExcelConverterSmartService">
+    <plugin-info>
+        <description> This smart service will automatically replace the all field tags in a word document based on JSON tags Structure and converts the document into docx format.</description>
+        <vendor name="LowCode Minds" url="https://www.lowcodeminds.com/" />
+        <version>1.0.0</version>
+        <application-version min="23.3" />
+    </plugin-info>
+    <!--  <smart-service name="DTA" key="dta" class="com.lowcodeminds.plugins.documentutilities.ReadAllFields" /> -->
+    <smart-service name="MPPExcelConversion" key="MPPToExcelConverterSmartService" class="org.mpp.plugin.MPPToExcelConverterSmartService" />
+
+</appian-plugin>
