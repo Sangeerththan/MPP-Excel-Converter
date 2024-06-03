@@ -59,7 +59,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>org.mpp.MPPToExcelConverter</mainClass>
+                            <mainClass>org.mpp.MPPToOutputConverter</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
