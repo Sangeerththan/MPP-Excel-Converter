@@ -1,6 +1,9 @@
 package org.mpp;
 
 import net.sf.mpxj.ProjectFile;
+import org.mpp.input.ProjectFileReaderFactory;
+import org.mpp.output.OutputFactory;
+import org.mpp.output.OutputFactoryProvider;
 
 public class MPPToOutputConverter {
 

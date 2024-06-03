@@ -1,4 +1,4 @@
-package org.mpp;
+package org.mpp.output;
 
 public class OutputFactoryProvider {
     public static OutputFactory getFactory(String type) {

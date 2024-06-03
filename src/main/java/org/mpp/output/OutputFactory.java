@@ -1,4 +1,4 @@
-package org.mpp;
+package org.mpp.output;
 
 import net.sf.mpxj.ProjectFile;
 

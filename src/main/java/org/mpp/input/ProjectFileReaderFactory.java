@@ -1,4 +1,4 @@
-package org.mpp;
+package org.mpp.input;
 
 import net.sf.mpxj.ProjectFile;
 import net.sf.mpxj.mpp.MPPReader;
