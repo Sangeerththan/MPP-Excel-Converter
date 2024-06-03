@@ -40,6 +40,32 @@
             <artifactId>hibernate-core</artifactId>
             <version>5.6.15.Final</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.xmlgraphics</groupId>
+            <artifactId>batik-svggen</artifactId>
+            <version>1.14</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.xmlgraphics</groupId>
+            <artifactId>batik-dom</artifactId>
+            <version>1.14</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.xmlgraphics</groupId>
+            <artifactId>batik-util</artifactId>
+            <version>1.14</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.xmlgraphics</groupId>
+            <artifactId>batik-ext</artifactId>
+            <version>1.14</version>
+        </dependency>
+        <!-- Batik codec for PNG and JPG transcoding -->
+        <dependency>
+            <groupId>org.apache.xmlgraphics</groupId>
+            <artifactId>batik-codec</artifactId>
+            <version>1.14</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
@@ -59,7 +85,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>org.mpp.MPPToExcelConverter</mainClass>
+                            <mainClass>org.mpp.ProjectToOutputConverter</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
