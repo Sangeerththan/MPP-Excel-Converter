@@ -12,7 +12,7 @@ const path = require('path');
   await page.goto(fileUrl, { waitUntil: 'networkidle2' });
 
   // Save the screenshot to the temporary directory
-  const outputFilePath = path.resolve(process.env.RUNNER_TEMP, 'dependency-check-report.png');
+  const outputFilePath = path.resolve(process.env.RUNNER_TEMP, 'reports/dependency-check-report.png');
   await page.screenshot({ path: outputFilePath });
 
   await browser.close();
