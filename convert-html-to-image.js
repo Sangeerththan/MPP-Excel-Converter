@@ -6,7 +6,7 @@ const path = require('path');
   const page = await browser.newPage();
 
   // Construct the file URL
-  const filePath = path.resolve(process.env.GITHUB_WORKSPACE, 'reports/dependency-check-report.html');
+  const filePath = path.resolve(process.env.RUNNER_TEMP '/dependency-check-report.html');
   const fileUrl = 'file:///' + filePath;
 
   await page.goto(fileUrl, { waitUntil: 'networkidle2' });
