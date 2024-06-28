@@ -52,8 +52,17 @@ jobs:
       - name: Ensure Reports Directory
         run: mkdir -p reports
 
+      - name: Check User and Group
+        run: id
+
       - name: List Files
         run: ls -la
+
+      - name: Create Test File
+        run: echo "test" > reports/test.txt
+
+      - name: Check Permissions
+        run: ls -la reports
 
       - name: Check Node.js Version
         run: node -v
