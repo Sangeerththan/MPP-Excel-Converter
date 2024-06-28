@@ -56,3 +56,14 @@ jobs:
         with:
            name: Depcheck report
            path: ${{github.workspace}}/reports
+      - name: Deploy to GitHub Pages
+        if: success()
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git clone --depth 1 --branch gh-pages https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} gh-pages
+          cp ${{github.workspace}}/reports/dependency-check-report.html gh-pages/
+          cd gh-pages
+          git add dependency-check-report.html
+          git commit -m "Update dependency check report"
+          git push
