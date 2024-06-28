@@ -34,9 +34,9 @@ jobs:
         id: Depcheck
         with:
           project: 'test'
-          path: '.'
+          path: ' ${{ runner.temp }}'
           format: 'HTML'
-          out: 'reports'
+          out: './'
           args: >
             --failOnCVSS 7
             --enableRetired
@@ -48,9 +48,6 @@ jobs:
 
       - name: Install Puppeteer
         run: npm install puppeteer
-
-      - name: Move HTML Report to Temp Directory
-        run: mv reports/dependency-check-report.html ${{ runner.temp }}/
 
       - name: Check Node.js Version
         run: node -v
