@@ -50,7 +50,7 @@ jobs:
         run: npm install puppeteer
 
       - name: Ensure Reports Directory
-        run: mkdir -p reports && chmod -R 777 reports
+        run: mkdir -p reports
 
       - name: List Files
         run: ls -la
