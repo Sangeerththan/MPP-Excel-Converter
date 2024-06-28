@@ -10,8 +10,9 @@ const path = require('path');
   const fileUrl = 'file:///' + filePath;
   
   await page.goto(fileUrl, { waitUntil: 'networkidle2' });
+  const fileImagePath = path.resolve(process.env.GITHUB_WORKSPACE, 'reports/dependency-check-report.png');
 
-  await page.screenshot({ path: 'reports/dependency-check-report.png' });
+  await page.screenshot({ path: fileImagePath });
 
   await browser.close();
 })();
