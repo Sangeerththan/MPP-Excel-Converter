@@ -44,10 +44,16 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14'
+          node-version: '16'  # Use Node.js version 16
 
       - name: Install Puppeteer
         run: npm install puppeteer
+
+      - name: List Files
+        run: ls -la
+
+      - name: Check Node.js Version
+        run: node -v
 
       - name: Convert HTML to Image
         run: node ./convert-html-to-image.js
@@ -71,4 +77,3 @@ jobs:
           git add dependency-check-report.png
           git commit -m "Update dependency check report image"
           git push
-
