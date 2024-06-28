@@ -34,9 +34,9 @@ jobs:
         id: Depcheck
         with:
           project: 'test'
-          path: ' ${{ runner.temp }}'
+          path: '.'
           format: 'HTML'
-          out: 'reports'
+          out: '${{ runner.temp }}/reports'
           args: >
             --failOnCVSS 7
             --enableRetired
