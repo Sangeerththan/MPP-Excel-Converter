@@ -50,7 +50,7 @@ jobs:
         run: npm install puppeteer
 
       - name: Convert HTML to Image
-        run: node convert-html-to-image.js
+        run: node ./convert-html-to-image.js
 
       - name: Upload Test results
         uses: actions/upload-artifact@v2
