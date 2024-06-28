@@ -36,7 +36,7 @@ jobs:
           project: 'test'
           path: ' ${{ runner.temp }}'
           format: 'HTML'
-          out: './'
+          out: 'reports'
           args: >
             --failOnCVSS 7
             --enableRetired
@@ -56,7 +56,7 @@ jobs:
         run: node ./convert-html-to-image.js
 
       - name: Copy Reports to Workspace
-        run: cp ${{ runner.temp }}/dependency-check-report.png ./reports
+        run: cp ${{ runner.temp }}/reports/dependency-check-report.png ./reports
 
       - name: Upload Test results
         uses: actions/upload-artifact@v2
