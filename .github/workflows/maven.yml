@@ -49,6 +49,9 @@ jobs:
       - name: Install Puppeteer
         run: npm install puppeteer
 
+      - name: Ensure Reports Directory
+        run: mkdir -p reports && chmod -R 777 reports
+
       - name: List Files
         run: ls -la
 
