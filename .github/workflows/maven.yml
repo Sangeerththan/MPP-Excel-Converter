@@ -49,17 +49,23 @@ jobs:
       - name: Install Puppeteer
         run: npm install puppeteer
 
+      - name: Move HTML Report to Temp Directory
+        run: mv reports/dependency-check-report.html ${{ runner.temp }}/
+
       - name: Check Node.js Version
         run: node -v
 
       - name: Convert HTML to Image
         run: node ./convert-html-to-image.js
 
+      - name: Copy Reports to Workspace
+        run: cp ${{ runner.temp }}/dependency-check-report.png ./reports
+
       - name: Upload Test results
         uses: actions/upload-artifact@v2
         with:
           name: Depcheck report
-          path: ${{github.workspace}}/reports
+          path: reports
 
       - name: Deploy to GitHub Pages
         if: success()
@@ -69,7 +75,7 @@ jobs:
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git clone --depth 1 --branch gh-pages https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} gh-pages
-          cp ${{github.workspace}}/reports/dependency-check-report.png gh-pages/
+          cp reports/dependency-check-report.png gh-pages/
           cd gh-pages
           git add dependency-check-report.png
           git commit -m "Update dependency check report image"
